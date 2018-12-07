@@ -22,7 +22,10 @@ setup(
     author_email='vitroid@gmail.com',
     url='https://github.com/vitroid/genice-extra/',
     keywords=['genice'],
-    install_requires=['GenIce>=0.23', 'genice-rdf', 'genice-svg', 'genice-diffr', 'genice-vpython', 'genice-matcher'],
+    install_requires=['genice-vpython',
+                      'genice-rdf',
+                      'genice-svg',
+                      ],
 
     license='MIT',
 )
