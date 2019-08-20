@@ -8,7 +8,7 @@ long_desc = "".join(open("README.md").readlines())
 
 setup(
     name='genice_extra',
-    version='1.0',
+    version='1.0.1',
     description='Installs all extra plugins for GenIce.',
     long_description=long_desc,
     long_description_content_type="text/markdown",
@@ -26,6 +26,7 @@ setup(
                       'genice-rdf>=0.3',
                       'genice-svg>=0.4',
                       'genice-twist>=0.1',
+                      'genice-cage>=0.1',
                       'genice-cif>=0.2',
                       'GenIce>=1.0rc5',
                       ],
