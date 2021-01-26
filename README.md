@@ -1,12 +1,16 @@
 # genice-extra
 
-Installs all extra-plugins for [GenIce](https://github.com/vitroid/GenIce).
+Installs all official extra-plugins for [GenIce2](https://github.com/vitroid/GenIce).
 
 ## Requirements
 
-* [GenIce](https://github.com/vitroid/GenIce) >=0.23.
+* [GenIce2](https://github.com/vitroid/GenIce) >=2.0.
 
-## Installation
+## Installation from PyPI
+
+    % pip install genice2-extra
+
+## Manual Installation
 
 ### System-wide installation
 

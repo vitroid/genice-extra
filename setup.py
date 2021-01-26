@@ -7,8 +7,8 @@ long_desc = "".join(open("README.md").readlines())
 
 
 setup(
-    name='genice_extra',
-    version='0.2',
+    name='genice2_extra',
+    version='0.3.1', # for genice2
     description='Installs all extra plugins for GenIce.',
     long_description=long_desc,
     long_description_content_type="text/markdown",
@@ -16,15 +16,17 @@ setup(
         "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "Programming Language :: Python",
-        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.6",
     ],
     author='Masakazu Matsumoto',
     author_email='vitroid@gmail.com',
     url='https://github.com/vitroid/genice-extra/',
     keywords=['genice'],
-    install_requires=['genice-vpython',
-                      'genice-rdf',
-                      'genice-svg',
+    install_requires=['genice2-cage',
+                      'genice2-rdf',
+                      'genice2-svg',
+                      'genice2-cif',
+                      'genice2-twist',
                       ],
 
     license='MIT',
