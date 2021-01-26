@@ -1,3 +1,6 @@
+PKGNAME=genice-extra
+all:
+	echo Hello.
 .DELETE_ON_ERROR:
 GENICE=genice2
 BASE=genice2_extra

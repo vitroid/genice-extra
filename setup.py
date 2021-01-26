@@ -8,7 +8,7 @@ long_desc = "".join(open("README.md").readlines())
 
 setup(
     name='genice2_extra',
-    version='0.3.1', # for genice2
+    version='2.0', # for genice2
     description='Installs all extra plugins for GenIce.',
     long_description=long_desc,
     long_description_content_type="text/markdown",
