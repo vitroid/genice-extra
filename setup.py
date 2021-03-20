@@ -8,7 +8,7 @@ long_desc = "".join(open("README.md").readlines())
 
 setup(
     name='genice2_extra',
-    version='2.0', # for genice2
+    version='2.1', # for genice2.1
     description='Installs all extra plugins for GenIce.',
     long_description=long_desc,
     long_description_content_type="text/markdown",
@@ -26,7 +26,8 @@ setup(
                       'genice2-rdf',
                       'genice2-svg',
                       'genice2-cif',
-                      'genice2-twist',
+                      # 'genice2-twist',
+                      'genice2-mdanalysis',
                       ],
 
     license='MIT',

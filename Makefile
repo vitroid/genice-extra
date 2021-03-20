@@ -11,7 +11,8 @@ test:
 	cd ../genice-svg     && make test
 	cd ../genice-cif     && make test
 	cd ../genice-cage    && make test
-	cd ../genice-twist   && make test
+	# cd ../genice-twist   && make test
+	cd ../genice-mdanalysis && make test
 
 check:
 	python ./setup.py check
