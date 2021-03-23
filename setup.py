@@ -22,13 +22,15 @@ setup(
     author_email='vitroid@gmail.com',
     url='https://github.com/vitroid/genice-extra/',
     keywords=['genice'],
-    install_requires=['genice2-cage',
-                      'genice2-rdf',
-                      'genice2-svg',
-                      'genice2-cif',
+    install_requires=['genice2-cage',         # 2.1 Compliant
+                      # 'genice2-rdf',
+                      'genice2-svg',          # 2.1 Compliant
+                      'genice2-cif',          # 2.1 Compliant
                       # 'genice2-twist',
-                      'genice2-mdanalysis',
+                      'genice2-mdanalysis',   # 2.1 compliant
                       ],
 
     license='MIT',
 )
+
+# genice-rdfはバグが解決していないので外す。mdanalysisを利用するのを推奨。
