@@ -1,10 +1,10 @@
-PKGNAME=genice-extra
 all:
 	echo Hello.
 .DELETE_ON_ERROR:
 GENICE=genice2
-BASE=genice2_extra
-PACKAGE=genice2-extra
+BASENAME=genice2_extra
+PIPNAME=genice2-extra
+GITNAME=genice-extra
 
 test:
 	# cd ../genice-rdf     && make test
@@ -14,31 +14,23 @@ test:
 	# cd ../genice-twist   && make test
 	cd ../genice-mdanalysis && make test
 
-check:
-	python ./setup.py check
-install:
-	python ./setup.py install
+%: temp_% replacer.py $(wildcard $(BASENAME)/lattices/*.py) $(wildcard $(BASENAME)/*.py)
+	python replacer.py $< > $@
 
-test-deploy: build
-	-pip install twine
-	twine upload -r pypitest dist/*
+
+test-deploy: clean
+	poetry publish --build -r testpypi
 test-install:
-	pip install pillow
-	pip install --index-url https://test.pypi.org/simple/ $(PACKAGE)
-
-
-
-install:
-	python ./setup.py install
+	pip install --index-url https://test.pypi.org/simple/ $(PIPNAME)
 uninstall:
-	-pip uninstall -y $(PACKAGE)
-build: README.md # $(wildcard $(BASE)/lattices/*.py) $(wildcard $(BASE)/*.py)
-	python ./setup.py sdist bdist_wheel
+	-pip uninstall -y $(PIPNAME)
+build: README.md $(wildcard genice2_yaplot/*.py)
+	poetry build
+deploy: clean
+	poetry publish --build
+check:
+	poetry check
 
-
-
-deploy: build
-	twine upload dist/*
 
 clean:
 	#cd ../genice-rdf     && make clean
